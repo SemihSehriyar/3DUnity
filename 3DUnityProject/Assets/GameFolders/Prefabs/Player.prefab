@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2917276651979070097}
-  - component: {fileID: 6667289831579912672}
   - component: {fileID: 2917276651972580668}
   - component: {fileID: 2917276651972580670}
+  - component: {fileID: 6667289831579912672}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -36,19 +36,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6667289831579912672
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2917276651979070096}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dff1aa2d808ea604c9a947fc22b83378, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  force: 500
 --- !u!65 &2917276651972580668
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -61,7 +48,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1.2411203, y: 1.7573092, z: 1.1119485}
-  m_Center: {x: 0.3041706, y: 0.86872613, z: -0.28688288}
+  m_Center: {x: 0.3041706, y: -0.13, z: -0.28688288}
 --- !u!54 &2917276651972580670
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -78,6 +65,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 56
   m_CollisionDetection: 1
+--- !u!114 &6667289831579912672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2917276651979070096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dff1aa2d808ea604c9a947fc22b83378, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2917276652590375590
 GameObject:
   m_ObjectHideFlags: 0
@@ -105,8 +104,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2917276652590375590}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -865,7 +864,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 9658
+  m_VersionIndex: 9673
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []

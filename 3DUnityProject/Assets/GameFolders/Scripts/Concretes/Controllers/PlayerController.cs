@@ -16,6 +16,7 @@ namespace UnityProject.Controllers
 		private Mover _mover;
 		private Rotator _rotator;
 		private DefaultInput _input;
+		private Fuel _fuel;
 
 		private bool _isForcedUp;
 		private float _leftRight;
@@ -28,17 +29,19 @@ namespace UnityProject.Controllers
 			_input = new DefaultInput();
 			_mover = new Mover(this);
 			_rotator = new Rotator(this);
+			_fuel = GetComponent<Fuel>();
 		}
 
 		private void Update()
 		{
-			if (_input.IsForcedUp) 
+			if (_input.IsForcedUp && !_fuel.IsEmpty) 
 			{
 				_isForcedUp = true;
 			}
 			else 
 			{
 				_isForcedUp = false;
+				_fuel.FuelIncrease(0.1f);
 			}
 			_leftRight = _input.LeftRight;
 		}
@@ -48,6 +51,8 @@ namespace UnityProject.Controllers
 			if (_isForcedUp) 
 			{
 				_mover.FixedTick();
+				_fuel.FuelDecrease(0.5f);
+
 			}
 			_rotator.FixedTick(_leftRight);
 		}
